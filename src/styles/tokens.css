@@ -1,0 +1,125 @@
+/*
+ * Design tokens.
+ *
+ * 1. Raw CSS variables per theme (:root = dark, [data-theme="light"] = light).
+ * 2. @theme maps them to Tailwind utilities, so you can write
+ *    `bg-surface`, `text-muted`, `border-line`, `font-display`, `shadow-card`, ...
+ *    Utilities follow the active theme automatically.
+ *
+ * To change the look of the whole site, edit the values here.
+ */
+
+:root {
+  --container-width: 1160px;
+  --header-height: 72px;
+
+  --success: #4ade80;
+  --danger: #f87171;
+  --danger-soft: #fca5a5;
+
+  /* Dark theme (default) */
+  --bg: #08111f;
+  --surface: #0d1929;
+  --surface-2: #122136;
+  --text: #f3f7fb;
+  --muted: #94a3b8;
+  --line: #22344c;
+  --accent: #38bdf8;
+  --accent-strong: #0ea5e9;
+  --accent-soft: rgba(56, 189, 248, 0.1);
+  --on-accent: #03111e;
+  --header-bg: rgba(8, 17, 31, 0.86);
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
+}
+
+:root[data-theme="light"] {
+  --bg: #f7f9fc;
+  --surface: #ffffff;
+  --surface-2: #eff4f9;
+  --text: #0a1628;
+  --muted: #475569;
+  --line: #94a6bd;
+  --accent: #0369a1;
+  --accent-strong: #075985;
+  --accent-soft: rgba(3, 105, 161, 0.08);
+  --on-accent: #ffffff;
+  --header-bg: rgba(247, 249, 252, 0.88);
+  --shadow: 0 24px 60px rgba(30, 50, 75, 0.1);
+}
+
+/* Theme-aware tokens: `inline` keeps the var() reference so utilities switch with the theme. */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-fg: var(--text);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
+  --color-header: var(--header-bg);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+
+  --shadow-card: var(--shadow);
+}
+
+/* Static tokens */
+@theme {
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, monospace;
+
+  /* Desktop-first breakpoints: use `max-tablet:` and `max-phone:` */
+  --breakpoint-tablet: 900px;
+  --breakpoint-phone: 680px;
+
+  --animate-bounce-soft: bounce-soft 1.8s ease-in-out infinite;
+  --animate-fade-in: fade-in 0.2s ease both;
+  --animate-modal-in: modal-in 0.25s ease both;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-portrait-in: portrait-in 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+
+  @keyframes bounce-soft {
+    0%,
+    100% {
+      transform: translateY(-2px);
+    }
+    50% {
+      transform: translateY(4px);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+
+  @keyframes modal-in {
+    from {
+      opacity: 0;
+      transform: translateY(12px) scale(0.99);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes portrait-in {
+    from {
+      opacity: 0;
+      transform: translateY(28px) scale(0.95);
+    }
+  }
+}
