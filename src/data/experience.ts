@@ -7,8 +7,11 @@ export const experiences: Experience[] = [
     dates: "2024 — Present",
     location: "Chennai, India",
     bullets: [
-      "Developed features for the Genesys Cloud Social Listening project, delivering both frontend (React) and backend (TypeScript) components",
-      "Developed multiple Genesys Engage projects using Java (Spring and Spring Boot) and AngularJS, contributing significantly to the successful delivery of project milestones",
+      "Developed multiple features across several Genesys Cloud projects, including Social Listening, Messaging Gadgets, and Analytics, delivering both frontend (React) and backend (TypeScript and Spring Boot) components",
+      "Designed and implemented features end-to-end from scratch, validating them through comprehensive unit, integration, and end-to-end testing (JUnit, Mockito, Vitest, Playwright) and delivering on schedule",
+      "Automated Jenkins jobs to trigger builds and run Playwright functional verification, with PagerDuty alerts configured for repeated failure scenarios",
+      "Served as Scrum Master for multiple sprints, facilitating sprint planning, daily stand-ups, and retrospectives to drive team alignment and delivery",
+      "Developed multiple features for Genesys Engage projects using Java (Spring and Spring Boot), contributing significantly to the successful delivery of project milestones",
       "Upgraded Spring and Spring Security to the latest versions, ensuring compatibility and improved security",
       "Proactively tracked code vulnerabilities and upgraded third-party libraries (e.g., Jetty, JDBC drivers) to maintain code quality and security compliance",
     ],

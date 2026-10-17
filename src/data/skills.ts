@@ -10,7 +10,7 @@ export const skills: SkillGroup[] = [
   {
     group: "Frameworks",
     icon: "layers",
-    items: [tech.springBoot, tech.react, tech.node, tech.hibernate, tech.jpa, tech.rtk],
+    items: [tech.springBoot, tech.react, tech.node, tech.hibernate, tech.jpa, tech.rtk, tech.bootstrap, tech.tailwind],
   },
   {
     group: "Cloud & DevOps",

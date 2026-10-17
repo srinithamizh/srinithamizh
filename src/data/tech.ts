@@ -2,6 +2,7 @@ import { FaAws, FaJava } from "react-icons/fa6";
 import { LuDatabase, LuDrama, LuSparkles, LuTableProperties } from "react-icons/lu";
 import {
   SiApachekafka,
+  SiBootstrap,
   SiDocker,
   SiGithub,
   SiGithubactions,
@@ -16,6 +17,7 @@ import {
   SiRedux,
   SiSpringboot,
   SiSumologic,
+  SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
 import type { TechItem } from "@/types";
@@ -38,6 +40,8 @@ export const tech = {
   hibernate: { name: "Hibernate", icon: SiHibernate },
   jpa: { name: "JPA", icon: LuTableProperties },
   rtk: { name: "RTK", icon: SiRedux },
+  bootstrap: { name: "Bootstrap", icon: SiBootstrap },
+  tailwind: { name: "Tailwind CSS", icon: SiTailwindcss },
 
   aws: { name: "AWS", icon: FaAws },
   jenkins: { name: "Jenkins", icon: SiJenkins },
